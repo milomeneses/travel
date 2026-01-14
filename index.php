@@ -232,9 +232,9 @@
         <strong data-footer-title>St. Kitts Island Campaign</strong>
         <p data-footer-copy>Created for Gen Z travelers worldwide.</p>
       </div>
-      <div>
-        <a href="admin.html">Admin</a>
-      </div>
+        <div>
+          <a href="admin.php">Admin</a>
+        </div>
     </footer>
 
     <script src="assets/js/app.js"></script>

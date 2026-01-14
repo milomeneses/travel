@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | St. Kitts Campaign</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="admin-body">
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="index.html">
+          <span>ST. KITTS ISLAND</span>
+          <small>Admin Console</small>
+        </a>
+        <div class="nav-actions">
+          <button class="ghost" data-logout>Log out</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="admin">
+      <section class="admin-panel" data-login-panel>
+        <h1>Admin access</h1>
+        <p>Use a demo user to access the CMS-style controls.</p>
+        <form class="admin-form" data-login-form>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="admin@stkitts.demo" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" placeholder="••••••" required />
+          </label>
+          <button class="cta" type="submit">Sign in</button>
+        </form>
+        <div class="admin-demo">
+          <h3>Demo users</h3>
+          <ul>
+            <li>admin@stkitts.demo / StKitts2025!</li>
+            <li>editor@stkitts.demo / IslandEdit24!</li>
+            <li>marketing@stkitts.demo / GenZCampaign!</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="admin-panel hidden" data-editor-panel>
+        <div class="admin-header">
+          <div>
+            <h1>Campaign editor</h1>
+            <p>Update menu links, logos, content, and analytics settings. Changes are saved to the server JSON when available.</p>
+          </div>
+          <button class="cta" data-save>Save changes</button>
+        </div>
+
+        <div class="admin-grid">
+          <div class="admin-card">
+            <h2>Branding</h2>
+            <label>
+              <span>Logo text</span>
+              <input type="text" data-config="logoText" />
+            </label>
+            <label>
+              <span>Logo tagline</span>
+              <input type="text" data-config="logoTagline" />
+            </label>
+          </div>
+
+          <div class="admin-card">
+            <h2>Menu links</h2>
+            <label>
+              <span>How to get here</span>
+              <input type="url" data-config="menuHow" />
+            </label>
+            <label>
+              <span>Plan Your Trip</span>
+              <input type="url" data-config="menuPlan" />
+            </label>
+            <label>
+              <span>ETA Form</span>
+              <input type="url" data-config="menuEta" />
+            </label>
+          </div>
+
+          <div class="admin-card">
+            <h2>Analytics & tags</h2>
+            <label>
+              <span>Google Analytics 4 Measurement ID</span>
+              <input type="text" data-config="gaMeasurementId" placeholder="G-XXXXXXXXXX" />
+            </label>
+            <label>
+              <span>Google Tag Manager Container ID</span>
+              <input type="text" data-config="gtmContainerId" placeholder="GTM-XXXXXXX" />
+            </label>
+            <label>
+              <span>Google Search Console verification token</span>
+              <input type="text" data-config="gscVerification" placeholder="Paste token" />
+            </label>
+          </div>
+
+          <div class="admin-card">
+            <h2>Hero content</h2>
+            <label>
+              <span>Hero title</span>
+              <input type="text" data-config="heroTitle" />
+            </label>
+            <label>
+              <span>Hero copy</span>
+              <textarea data-config="heroCopy"></textarea>
+            </label>
+          </div>
+        </div>
+
+        <section class="editor-area">
+          <h2>Modern content editor</h2>
+          <p>Click any block to edit. Use the toolbar to format text.</p>
+          <div class="toolbar">
+            <button type="button" data-format="bold">Bold</button>
+            <button type="button" data-format="italic">Italic</button>
+            <button type="button" data-format="underline">Underline</button>
+            <button type="button" data-format="insertUnorderedList">List</button>
+            <button type="button" data-format="createLink">Link</button>
+          </div>
+          <div class="content-grid" data-content-grid></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

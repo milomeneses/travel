@@ -1,0 +1,29 @@
+{
+  "logoText": "ST. KITTS ISLAND",
+  "logoTagline": "Find your next story",
+  "menuHow": "https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search",
+  "menuPlan": "https://www.visitstkitts.com/plan-your-trip/gettingaround-st-kitts",
+  "menuEta": "https://www.knatravelform.kn/en",
+  "heroTitle": "Touch down where culture, sea, and soul collide.",
+  "heroCopy": "From volcanic hikes to late-night beach sessions, St. Kitts is the island for bold itineraries and story-worthy moments.",
+  "gaMeasurementId": "",
+  "gtmContainerId": "",
+  "gscVerification": "",
+  "contentBlocks": [
+    {
+      "id": "campaign",
+      "title": "Why this campaign exists",
+      "copy": "We are spotlighting St. Kitts for Gen Z travelers and Kittitian heritage communities who want to reconnect with the island in a fresh way."
+    },
+    {
+      "id": "things",
+      "title": "Things to do",
+      "copy": "The same menu placement as the VSK experience, curated to highlight top Gen Z moments."
+    },
+    {
+      "id": "places",
+      "title": "Places of interest",
+      "copy": "Add these to your itinerary for a full island story in one trip."
+    }
+  ]
+}

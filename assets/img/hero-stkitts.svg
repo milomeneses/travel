@@ -1,0 +1,21 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0" x1="0" y1="0" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1B1F"/>
+      <stop offset="0.45" stop-color="#1A2C2F"/>
+      <stop offset="1" stop-color="#2F3E3A"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F6C26B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F6C26B" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#paint0)"/>
+  <circle cx="1540" cy="220" r="280" fill="url(#sun)"/>
+  <path d="M0 760C320 650 640 620 960 680C1280 740 1600 820 1920 760V1080H0V760Z" fill="#11262B"/>
+  <path d="M0 840C320 760 640 740 960 800C1280 860 1600 920 1920 860V1080H0V840Z" fill="#0B1B1F"/>
+  <circle cx="260" cy="260" r="160" fill="#0F2A31" opacity="0.5"/>
+  <circle cx="420" cy="360" r="120" fill="#0F2A31" opacity="0.3"/>
+  <path d="M1380 640L1520 520L1660 640L1520 760L1380 640Z" fill="#1D3A3D" opacity="0.45"/>
+  <path d="M1600 540L1760 400L1920 540L1760 680L1600 540Z" fill="#1D3A3D" opacity="0.3"/>
+</svg>

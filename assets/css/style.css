@@ -26,6 +26,17 @@ body {
   line-height: 1.6;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'komu-new', 'komu-a', 'komu-b', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .home-body {
   background: var(--bg);
 }
@@ -83,6 +94,7 @@ a {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .logo {
@@ -695,8 +707,10 @@ main {
   }
 
   .menu {
-    position: fixed;
-    inset: 6rem 1rem auto 1rem;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 0;
+    right: 0;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.98);
     border: 1px solid var(--border);
@@ -704,6 +718,8 @@ main {
     border-radius: 1rem;
     transform: translateY(-120%);
     transition: transform 0.2s ease;
+    z-index: 20;
+    box-shadow: 0 20px 30px rgba(28, 38, 34, 0.12);
   }
 
   .menu.open {
@@ -724,6 +740,10 @@ main {
   .nav-actions {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  .menu {
+    font-size: 0.85rem;
   }
 
   .hero {

@@ -21,7 +21,10 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="#home" aria-label="St. Kitts campaign home">
-          <span data-logo-text>St. Kitts</span>
+          <span class="logo-mark">
+            <img src="https://www.visitstkitts.com/assets/images/logo-white.svg" alt="St. Kitts" />
+          </span>
+          <span class="logo-text" data-logo-text>St. Kitts</span>
           <small data-logo-tagline>Find your next story</small>
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">

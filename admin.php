@@ -11,7 +11,10 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="index.php">
-          <span>St. Kitts</span>
+          <span class="logo-mark">
+            <img src="https://www.visitstkitts.com/assets/images/logo-white.svg" alt="St. Kitts" />
+          </span>
+          <span class="logo-text">St. Kitts</span>
           <small>Admin Console</small>
         </a>
         <div class="nav-actions">

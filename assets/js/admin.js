@@ -10,12 +10,12 @@ const demoUsers = [
 ];
 
 const defaultConfig = {
-  logoText: 'ST. KITTS ISLAND',
+  logoText: 'St. Kitts',
   logoTagline: 'Find your next story',
   menuHow: 'https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search',
   menuPlan: 'https://www.visitstkitts.com/plan-your-trip/gettingaround-st-kitts',
   menuEta: 'https://www.knatravelform.kn/en',
-  heroTitle: 'Touch down where culture, sea, and soul collide.',
+  heroTitle: 'Cold on the pitch, chill in St. Kitts.',
   heroCopy:
     'From volcanic hikes to late-night beach sessions, St. Kitts is the island for bold itineraries and story-worthy moments.',
   gaMeasurementId: '',

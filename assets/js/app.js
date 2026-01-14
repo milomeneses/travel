@@ -171,6 +171,7 @@ const initialize = async () => {
 
 const navToggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('.menu');
+const megaTriggers = document.querySelectorAll('.menu-trigger');
 
 if (navToggle && menu) {
   navToggle.addEventListener('click', () => {
@@ -178,6 +179,22 @@ if (navToggle && menu) {
     navToggle.setAttribute('aria-expanded', isOpen);
   });
 }
+
+megaTriggers.forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const parent = trigger.closest('.menu-item');
+    if (!parent) return;
+    const isOpen = parent.classList.toggle('open');
+    document.querySelectorAll('.menu-item.has-mega').forEach((item) => {
+      if (item !== parent) {
+        item.classList.remove('open');
+      }
+    });
+    if (!isOpen) {
+      parent.classList.remove('open');
+    }
+  });
+});
 
 const applyLanguage = (lang) => {
   const entries = translations[lang];

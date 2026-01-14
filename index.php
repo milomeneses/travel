@@ -21,17 +21,37 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="#home" aria-label="St. Kitts campaign home">
-          <span class="logo-mark">
-            <img src="https://www.visitstkitts.com/assets/images/logo-white.svg" alt="St. Kitts" />
-          </span>
+          <img class="logo-image" src="https://www.visitstkitts.com/assets/images/logo-white.svg" alt="St. Kitts" />
           <span class="logo-text" data-logo-text>St. Kitts</span>
-          <small data-logo-tagline>Find your next story</small>
         </a>
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
           <span></span>
           <span></span>
         </button>
         <div id="primary-menu" class="menu">
+          <div class="menu-item has-mega">
+            <button class="menu-trigger" type="button">Destinations</button>
+            <div class="mega-menu">
+              <div class="mega-list">
+                <button class="mega-pill active">Frigate Bay</button>
+                <button class="mega-pill">Basseterre</button>
+                <button class="mega-pill">Brimstone Hill</button>
+                <button class="mega-pill">South Friars</button>
+                <button class="mega-pill">Sandy Point</button>
+                <button class="mega-pill">Dieppe Bay</button>
+                <button class="mega-pill">Old Road</button>
+                <button class="mega-pill">Half Moon Bay</button>
+                <button class="mega-pill">Cockleshell</button>
+                <button class="mega-pill">Liamuiga</button>
+              </div>
+              <div class="mega-card">
+                <div class="mega-image"></div>
+                <div class="mega-caption">
+                  <span class="mega-badge">Frigate Bay</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="#home" data-menu="home">Home</a>
           <a href="#things" data-menu="things">Things To Do</a>
           <a href="https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search" target="_blank" rel="noreferrer" data-menu="how">How to get here</a>

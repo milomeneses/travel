@@ -111,19 +111,10 @@ a {
   font-size: 1.3rem;
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #1c2622;
-  padding: 0.35rem 0.6rem;
-  border-radius: 999px;
-  width: fit-content;
-}
-
-.logo-mark img {
-  height: 26px;
+.logo-image {
+  height: 30px;
   display: block;
+  filter: brightness(0);
 }
 
 .logo-text {
@@ -143,6 +134,95 @@ a {
   display: flex;
   gap: 1.2rem;
   font-size: 0.9rem;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-trigger {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 0;
+  width: min(820px, 90vw);
+  background: #fff;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: none;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+  z-index: 30;
+  box-shadow: 0 30px 60px rgba(28, 38, 34, 0.18);
+}
+
+.menu-item:hover .mega-menu,
+.menu-item.open .mega-menu {
+  display: grid;
+}
+
+.mega-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.5rem;
+}
+
+.mega-pill {
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.35rem 0;
+}
+
+.mega-pill.active {
+  background: #f2bf5f;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  width: fit-content;
+}
+
+.mega-card {
+  background: #f6f0e5;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mega-image {
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+    url('../img/hero-stkitts.svg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.75rem;
+  min-height: 220px;
+}
+
+.mega-caption {
+  display: flex;
+  align-items: center;
+}
+
+.mega-badge {
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .menu a {
@@ -752,6 +832,21 @@ main {
     display: flex;
   }
 
+  .mega-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item:hover .mega-menu {
+    display: none;
+  }
+
+  .menu-item.open .mega-menu {
+    display: grid;
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -770,6 +865,10 @@ main {
 
   .menu {
     font-size: 0.85rem;
+  }
+
+  .mega-list {
+    grid-template-columns: 1fr;
   }
 
   .hero {

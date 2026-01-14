@@ -707,23 +707,22 @@ main {
   }
 
   .menu {
-    position: absolute;
-    top: calc(100% + 0.75rem);
-    left: 0;
-    right: 0;
+    position: fixed;
+    top: 7.5rem;
+    left: 1rem;
+    right: 1rem;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.98);
     border: 1px solid var(--border);
     padding: 1rem;
     border-radius: 1rem;
-    transform: translateY(-120%);
-    transition: transform 0.2s ease;
+    display: none;
     z-index: 20;
     box-shadow: 0 20px 30px rgba(28, 38, 34, 0.12);
   }
 
   .menu.open {
-    transform: translateY(0);
+    display: flex;
   }
 
   .nav-toggle {

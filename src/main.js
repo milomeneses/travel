@@ -48,20 +48,51 @@ const renderLists = (data) => {
 
   const thingsContainer = document.querySelector('[data-list="things"]');
   if (thingsContainer) {
-    thingsContainer.innerHTML = data.thingsList
-      .map(
-        (item) => `
+    const itemMarkup = data.thingsList
+      .map((item) => {
+        const media = item.video
+          ? `<video src="${item.video}" muted autoplay loop playsinline></video>`
+          : `<img src="${item.image}" alt="${item.title}" width="600" height="750" loading="lazy" />`;
+        return `
         <article class="thing-card">
-          <div class="thing-image">
-            <img src="${item.image}" alt="${item.title}" width="600" height="450" loading="lazy" />
+          <div class="thing-media">
+            ${media}
+            <figcaption class="thing-caption">
+              <h3>${item.title}</h3>
+              <p>${item.copy}</p>
+            </figcaption>
           </div>
           <div class="thing-body">
             <h3>${item.title}</h3>
             <p>${item.copy}</p>
           </div>
-        </article>`
-      )
+        </article>`;
+      })
       .join('');
+
+    const duplicateMarkup = data.thingsList
+      .map((item) => {
+        const media = item.video
+          ? `<video src="${item.video}" muted autoplay loop playsinline></video>`
+          : `<img src="${item.image}" alt="${item.title}" width="600" height="750" loading="lazy" />`;
+        return `
+        <article class="thing-card" aria-hidden="true">
+          <div class="thing-media">
+            ${media}
+            <figcaption class="thing-caption">
+              <h3>${item.title}</h3>
+              <p>${item.copy}</p>
+            </figcaption>
+          </div>
+          <div class="thing-body">
+            <h3>${item.title}</h3>
+            <p>${item.copy}</p>
+          </div>
+        </article>`;
+      })
+      .join('');
+
+    thingsContainer.innerHTML = itemMarkup + duplicateMarkup;
   }
 
   const ctaContainer = document.querySelector('[data-list="ctaLinks"]');

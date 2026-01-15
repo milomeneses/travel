@@ -56,13 +56,13 @@ Ruta: `/admin.html`
 - Links del menú (labels y URLs)
 
 ### Cómo cambiar la contraseña
-1. Genera un hash SHA-256 del nuevo password:
-   ```bash
-   node -e "const crypto=require('crypto');console.log(crypto.createHash('sha256').update('TU_PASSWORD').digest('hex'))"
-   ```
-2. Reemplaza el hash en:
-   - `admin.js` (const `ADMIN_PASSWORD_HASH`)
-   - `save-content.php` (const `ADMIN_PASSWORD_HASH`)
+1. Abre `/generate-password.php` en el navegador (en un entorno seguro).
+2. Genera el hash SHA-256 con tu nueva contraseña.
+3. Pega el hash en `config.php` en la constante `ADMIN_PASSWORD_HASH`.
+
+#### Cambios futuros de contraseña
+- Repite el proceso con `generate-password.php`.
+- Sustituye el hash en `config.php`.
 
 ### Backups de JSON
 Cada guardado crea un backup automático en `data/backups/`.
@@ -71,6 +71,11 @@ Cada guardado crea un backup automático en `data/backups/`.
 - Admin Light es **minimalista**: usa hash SHA-256 y validación básica.
 - Úsalo solo en entornos con HTTPS y acceso restringido.
 - Considera mover el admin detrás de autenticación adicional en producción.
+
+## 🎨 Logo y tipografías
+- El logo principal vive en `public/logo.svg`.
+- En `index.html` y `es/index.html` debes reemplazar `your-kit-id` con tu **Adobe Fonts Kit ID**.
+- Asegúrate de incluir la familia **Komu New** en el kit para los títulos.
 
 ## ✅ Tracking (GTM + GA4 + Search Console)
 ### Google Tag Manager

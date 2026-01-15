@@ -1,5 +1,3 @@
-const ADMIN_PASSWORD_HASH = 'aca60048d584b59951f1b8d37ac5b727b1a975b4a061c6c0b6f6327612846e51';
-
 const loginCard = document.querySelector('#login-card');
 const adminPanel = document.querySelector('#admin-panel');
 const loginButton = document.querySelector('#login-button');
@@ -187,16 +185,29 @@ loginButton.addEventListener('click', async () => {
   }
 
   const hash = await hashPassword(value);
-  if (hash !== ADMIN_PASSWORD_HASH) {
-    showStatus(loginStatus, 'Contraseña incorrecta.', 'error');
-    return;
+  try {
+    await verifyPassword(hash);
+    sessionPasswordHash = hash;
+    loginCard.classList.add('hidden');
+    adminPanel.classList.remove('hidden');
+    await loadLocale(currentLocale);
+  } catch (error) {
+    showStatus(loginStatus, error.message, 'error');
   }
-
-  sessionPasswordHash = hash;
-  loginCard.classList.add('hidden');
-  adminPanel.classList.remove('hidden');
-  await loadLocale(currentLocale);
 });
+
+const verifyPassword = async (hash) => {
+  const response = await fetch('/save-content.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action: 'verify', passwordHash: hash })
+  });
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error(result?.message || 'Contraseña incorrecta.');
+  }
+  return result;
+};
 
 const loadLocale = async (locale) => {
   try {

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-header('Content-Type: application/json; charset=utf-8');
+require_once __DIR__ . '/config.php';
 
-const ADMIN_PASSWORD_HASH = 'aca60048d584b59951f1b8d37ac5b727b1a975b4a061c6c0b6f6327612846e51';
+header('Content-Type: application/json; charset=utf-8');
 
 $input = file_get_contents('php://input');
 if ($input === false) {
@@ -23,6 +23,12 @@ $passwordHash = $payload['passwordHash'] ?? '';
 if (!hash_equals(ADMIN_PASSWORD_HASH, $passwordHash)) {
   http_response_code(401);
   echo json_encode(['message' => 'Unauthorized.']);
+  exit;
+}
+
+$action = $payload['action'] ?? 'save';
+if ($action === 'verify') {
+  echo json_encode(['message' => 'Verified']);
   exit;
 }
 

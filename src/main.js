@@ -2,7 +2,6 @@ import './styles/main.css';
 
 const app = document.querySelector('#app');
 
-const dataModules = import.meta.glob('./data/*.json', { eager: true });
 const partialModules = import.meta.glob('./partials/**/*.html', { eager: true, as: 'raw' });
 
 const getLocale = () => (window.location.pathname.startsWith('/es') ? 'es' : 'en');
@@ -169,15 +168,27 @@ const bindReveal = () => {
   revealItems.forEach((item) => observer.observe(item));
 };
 
-const init = () => {
-  const locale = getLocale();
-  const data = dataModules[`./data/${locale}.json`]?.default;
-  if (!data) return;
-  buildLayout(data);
-  renderLists(data);
-  bindNav();
-  bindScrollSpy();
-  bindReveal();
+const loadContent = async (locale) => {
+  const response = await fetch(`/data/${locale}.json`, { cache: 'no-store' });
+  if (!response.ok) {
+    throw new Error(`Failed to load ${locale} content.`);
+  }
+  return response.json();
+};
+
+const init = async () => {
+  try {
+    const locale = getLocale();
+    const data = await loadContent(locale);
+    buildLayout(data);
+    renderLists(data);
+    bindNav();
+    bindScrollSpy();
+    bindReveal();
+  } catch (error) {
+    app.innerHTML = '<p style=\"padding:2rem;\">Content failed to load.</p>';
+    console.error(error);
+  }
 };
 
 init();

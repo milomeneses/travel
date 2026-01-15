@@ -1,10 +1,11 @@
 # Cole Palmer x St Kitts — Landing editorial (Vite + Vanilla JS)
 
-Landing premium editorial, mobile-first, con contenido desacoplado por idioma y partials HTML.
+Landing premium editorial, mobile-first, con contenido desacoplado por idioma, partials HTML y un panel **Admin Light** para editar JSON sin recompilar.
 
 ## ✅ Requisitos
-- Node.js 18+ recomendado
+- Node.js 18+ recomendado (solo para desarrollo con Vite)
 - npm (incluido con Node)
+- PHP 8+ si quieres usar el panel admin (`/admin.html` + `save-content.php`)
 
 ## 🚀 Instalación rápida (novato)
 ```bash
@@ -19,25 +20,57 @@ npm run build
 ```
 La carpeta lista para subir es **`dist/`**.
 
+> **Nota**: El panel admin usa PHP, por lo que **no funciona dentro de `dist/`**. Si necesitas Admin Light en producción, despliega el proyecto con PHP (no solo archivos estáticos) y conserva `admin.html`, `admin.js`, `save-content.php` y la carpeta `data/`.
+
 ## 📤 Subir a Hostinger (FTP)
 1. Ejecuta `npm run build`.
 2. Entra a la carpeta `dist/`.
 3. Sube **todo el contenido de `dist/`** a tu hosting por FTP.
+
+Si quieres usar Admin Light en el hosting:
+- Sube también `admin.html`, `admin.js`, `save-content.php` y la carpeta `data/` al mismo nivel que tu `index.html`.
+- Asegúrate de que el hosting soporte PHP y tenga permisos de escritura en `data/`.
 
 ## 🌍 Multi-idioma
 - Inglés: `/index.html`
 - Español: `/es/index.html`
 
 El contenido vive en:
-- `src/data/en.json`
-- `src/data/es.json`
+- `data/en.json`
+- `data/es.json`
+
+`src/main.js` detecta el idioma, carga el JSON y compone el HTML.
 
 ## 🧩 Estructura de secciones (partials)
 - `src/partials/header.html`
 - `src/partials/footer.html`
 - `src/partials/sections/*.html`
 
-`src/main.js` detecta el idioma, carga el JSON y compone el HTML.
+## ✅ Admin Light (editar contenido sin recompilar)
+Ruta: `/admin.html`
+
+### Qué puedes editar
+- Hero (title, subtitle, CTA)
+- Chapters 01–05
+- Things To Do (lista de items visibles; **sin Romance ni Rum Master**)
+- Links del menú (labels y URLs)
+
+### Cómo cambiar la contraseña
+1. Genera un hash SHA-256 del nuevo password:
+   ```bash
+   node -e "const crypto=require('crypto');console.log(crypto.createHash('sha256').update('TU_PASSWORD').digest('hex'))"
+   ```
+2. Reemplaza el hash en:
+   - `admin.js` (const `ADMIN_PASSWORD_HASH`)
+   - `save-content.php` (const `ADMIN_PASSWORD_HASH`)
+
+### Backups de JSON
+Cada guardado crea un backup automático en `data/backups/`.
+
+### Advertencias de seguridad
+- Admin Light es **minimalista**: usa hash SHA-256 y validación básica.
+- Úsalo solo en entornos con HTTPS y acceso restringido.
+- Considera mover el admin detrás de autenticación adicional en producción.
 
 ## ✅ Tracking (GTM + GA4 + Search Console)
 ### Google Tag Manager
@@ -69,4 +102,4 @@ El contenido vive en:
 
 ---
 
-Si necesitas cambiar textos, edita los JSON en `src/data/`.
+Si necesitas cambiar textos, edita los JSON en `data/`.

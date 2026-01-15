@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "things": "Qué hacer",
+    "thingsId": "things",
+    "how": "Cómo llegar",
+    "howLink": "https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search",
+    "plan": "Planifica tu viaje",
+    "planLink": "https://www.visitstkitts.com/plan-your-trip/getting-around-st-kitts",
+    "eta": "Formulario ETA",
+    "etaLink": "https://www.knatravelform.kn/en"
+  },
+  "hero": {
+    "eyebrow": "Cole Palmer x St Kitts",
+    "title": "Un escape editorial escrito con luz de mar.",
+    "subtitle": "Un viaje curado por St Kitts donde el ritmo del fútbol se encuentra con la calma insular, enmarcado en lujo moderno.",
+    "primaryCta": "Explorar capítulos",
+    "secondaryCta": "Qué hacer",
+    "primaryCtaId": "chapters",
+    "secondaryCtaId": "things",
+    "metaLeft": "5 capítulos curados",
+    "metaRight": "Editorial mobile-first",
+    "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+    "imageAlt": "Vista aérea del océano en St Kitts"
+  },
+  "chapters": {
+    "id": "chapters",
+    "eyebrow": "Narrativa",
+    "title": "Capítulos 01–05",
+    "subtitle": "Una secuencia cinematográfica que revela nuevas texturas de la isla."
+  },
+  "chaptersList": [
+    {
+      "number": "01",
+      "title": "Primera luz",
+      "copy": "Aterrizaje con amanecer dorado sobre Basseterre y el ritmo suave del malecón."
+    },
+    {
+      "number": "02",
+      "title": "Notas verdes",
+      "copy": "Senderos de selva, cascadas ocultas y el pulso sereno del interior."
+    },
+    {
+      "number": "03",
+      "title": "Calma oceánica",
+      "copy": "Claridad salina, remos suaves y horizonte abierto."
+    },
+    {
+      "number": "04",
+      "title": "Brillo nocturno",
+      "copy": "Mercados nocturnos, texturas artesanales y sabores bajo luz cálida."
+    },
+    {
+      "number": "05",
+      "title": "Plano final",
+      "copy": "Un retrato de St Kitts como lugar para respirar, recuperar y reimaginar."
+    }
+  ],
+  "things": {
+    "id": "things",
+    "eyebrow": "Qué hacer",
+    "title": "Momentos curados en la isla",
+    "subtitle": "Experiencias diseñadas para un lujo sin esfuerzo."
+  },
+  "thingsList": [
+    {
+      "title": "Fortaleza de Brimstone Hill",
+      "copy": "Terrazas UNESCO con panorámica del Atlántico.",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Navegación por el canal de Nevis",
+      "copy": "Un paseo al mediodía con brisa suave y agua turquesa.",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Caminata al Monte Liamuiga",
+      "copy": "Subida al amanecer entre neblina verde hasta el cráter.",
+      "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Costa de arena negra",
+      "copy": "Texturas dramáticas y tonos editoriales intensos.",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Visita a plantaciones",
+      "copy": "Arquitectura clásica, herencia local y elegancia histórica.",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Menú degustación",
+      "copy": "Platos de temporada inspirados en productores locales.",
+      "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "cta": {
+    "id": "travel",
+    "eyebrow": "Planifica el viaje",
+    "title": "Esenciales de viaje",
+    "subtitle": "Accesos directos a recursos oficiales para planificar sin fricción."
+  },
+  "ctaLinks": [
+    {
+      "title": "Cómo llegar",
+      "copy": "Consulta opciones de vuelo y rutas recomendadas.",
+      "link": "https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search",
+      "label": "Buscar vuelos"
+    },
+    {
+      "title": "Planifica tu viaje",
+      "copy": "Entiende el transporte local y cómo moverte.",
+      "link": "https://www.visitstkitts.com/plan-your-trip/getting-around-st-kitts",
+      "label": "Ver transporte"
+    },
+    {
+      "title": "Formulario ETA",
+      "copy": "Completa tu entrada digital antes de llegar.",
+      "link": "https://www.knatravelform.kn/en",
+      "label": "Abrir ETA"
+    }
+  ],
+  "faq": {
+    "id": "faq",
+    "eyebrow": "Esenciales",
+    "title": "Respuestas rápidas",
+    "subtitle": "Un vistazo a los datos clave para el viaje."
+  },
+  "faqList": [
+    {
+      "question": "¿Cuál es la mejor época para visitar?",
+      "answer": "De diciembre a abril hay clima más estable para producciones editoriales."
+    },
+    {
+      "question": "¿Necesito visa?",
+      "answer": "La mayoría solo necesita pasaporte vigente y el formulario ETA."
+    },
+    {
+      "question": "¿Cuántos días son ideales?",
+      "answer": "Entre cinco y siete noches permiten explorar costa e interior."
+    }
+  ],
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Concierge",
+    "title": "Solicita el itinerario de campaña",
+    "subtitle": "Déjanos tus datos y el equipo editorial responderá en 48 horas.",
+    "tagOne": "Traslados privados",
+    "tagTwo": "Dirección creativa",
+    "tagThree": "Anfitriones culturales",
+    "formLabel": "Formulario de contacto",
+    "formName": "Nombre",
+    "formEmail": "Correo",
+    "formMessage": "Mensaje",
+    "formNamePlaceholder": "Tu nombre",
+    "formEmailPlaceholder": "tucorreo@email.com",
+    "formMessagePlaceholder": "Cuéntanos tu viaje ideal",
+    "formButton": "Enviar solicitud"
+  },
+  "footer": {
+    "title": "Cole Palmer x St Kitts",
+    "copy": "Landing editorial creada para storytelling elegante y rápido.",
+    "note": "© 2024 St Kitts Tourism Authority",
+    "backToTop": "Volver arriba"
+  }
+}

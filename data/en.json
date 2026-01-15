@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "things": "Things To Do",
+    "thingsId": "things",
+    "how": "How to get here",
+    "howLink": "https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search",
+    "plan": "Plan Your Trip",
+    "planLink": "https://www.visitstkitts.com/plan-your-trip/getting-around-st-kitts",
+    "eta": "ETA Form",
+    "etaLink": "https://www.knatravelform.kn/en"
+  },
+  "hero": {
+    "eyebrow": "Cole Palmer x St Kitts",
+    "title": "An editorial escape written in sea light.",
+    "subtitle": "A curated journey through St Kitts where football rhythm meets island stillness, framed in modern editorial luxury.",
+    "primaryCta": "Explore the chapters",
+    "secondaryCta": "Things to do",
+    "primaryCtaId": "chapters",
+    "secondaryCtaId": "things",
+    "metaLeft": "5 curated chapters",
+    "metaRight": "Mobile-first editorial",
+    "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+    "imageAlt": "Aerial ocean view in St Kitts"
+  },
+  "chapters": {
+    "id": "chapters",
+    "eyebrow": "Storytelling",
+    "title": "Chapters 01–05",
+    "subtitle": "A sequence of cinematic moments, each revealing a new texture of the island."
+  },
+  "chaptersList": [
+    {
+      "number": "01",
+      "title": "First Light Arrival",
+      "copy": "Landing with golden sunrise across Basseterre and the gentle tempo of the promenade."
+    },
+    {
+      "number": "02",
+      "title": "Green Notes",
+      "copy": "Exploring rainforest trails, hidden waterfalls, and the soft hum of the interior."
+    },
+    {
+      "number": "03",
+      "title": "Ocean Calm",
+      "copy": "Salt water clarity, paddle rhythms, and the horizon stretched clean."
+    },
+    {
+      "number": "04",
+      "title": "Night Market Glow",
+      "copy": "Evening markets, handcrafted textures, and island flavors under warm light."
+    },
+    {
+      "number": "05",
+      "title": "Closing Frame",
+      "copy": "A final portrait of St Kitts as a place to breathe, recover, and reimagine."
+    }
+  ],
+  "things": {
+    "id": "things",
+    "eyebrow": "Things To Do",
+    "title": "Curated island highlights",
+    "subtitle": "Designed to feel effortless, these experiences keep the focus on slow luxury."
+  },
+  "thingsList": [
+    {
+      "title": "Brimstone Hill Fortress",
+      "copy": "Walk UNESCO terraces and take in the Atlantic panorama.",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Nevis Channel Sail",
+      "copy": "A mid-day sail with soft winds and turquoise clarity.",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Mount Liamuiga Hike",
+      "copy": "A sunrise climb through misty green to the crater rim.",
+      "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Black Sand Coast",
+      "copy": "Dramatic shoreline textures and moody editorial tones.",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Plantation Estate Visit",
+      "copy": "Classic architecture, island heritage, and elegant interiors.",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "title": "Chef's Table Tasting",
+      "copy": "Seasonal plates inspired by local farmers and coastal markets.",
+      "image": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "cta": {
+    "id": "travel",
+    "eyebrow": "Plan the journey",
+    "title": "Your travel essentials",
+    "subtitle": "Direct links to official resources to keep planning frictionless."
+  },
+  "ctaLinks": [
+    {
+      "title": "How to get here",
+      "copy": "Find current flight options and preferred routes.",
+      "link": "https://www.britishairways.com/content/flights/caribbean/st-kitts-and-nevis#search",
+      "label": "Search flights"
+    },
+    {
+      "title": "Plan your trip",
+      "copy": "Understand local transportation and island mobility.",
+      "link": "https://www.visitstkitts.com/plan-your-trip/getting-around-st-kitts",
+      "label": "See transport"
+    },
+    {
+      "title": "ETA Form",
+      "copy": "Complete your digital entry ahead of arrival.",
+      "link": "https://www.knatravelform.kn/en",
+      "label": "Open ETA"
+    }
+  ],
+  "faq": {
+    "id": "faq",
+    "eyebrow": "Essentials",
+    "title": "Quick answers",
+    "subtitle": "A snapshot of key planning details for the campaign trip."
+  },
+  "faqList": [
+    {
+      "question": "What is the best time to visit?",
+      "answer": "December to April offers the most consistent weather for editorial shoots."
+    },
+    {
+      "question": "Do I need a visa?",
+      "answer": "Most travelers only need a valid passport and the ETA form."
+    },
+    {
+      "question": "How long is the ideal stay?",
+      "answer": "Five to seven nights allows time for both coast and interior exploration."
+    }
+  ],
+  "contact": {
+    "id": "contact",
+    "eyebrow": "Concierge",
+    "title": "Request the campaign itinerary",
+    "subtitle": "Leave your details and our editorial travel desk will respond within 48 hours.",
+    "tagOne": "Private transfers",
+    "tagTwo": "Creative direction",
+    "tagThree": "Cultural hosts",
+    "formLabel": "Contact form",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formNamePlaceholder": "Your name",
+    "formEmailPlaceholder": "you@email.com",
+    "formMessagePlaceholder": "Tell us about your ideal trip",
+    "formButton": "Send request"
+  },
+  "footer": {
+    "title": "Cole Palmer x St Kitts",
+    "copy": "An editorial campaign landing page built for fast, elegant storytelling.",
+    "note": "© 2024 St Kitts Tourism Authority",
+    "backToTop": "Back to top"
+  }
+}

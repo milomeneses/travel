@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Light — Cole Palmer x St Kitts</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f4ef;
+        --card: #ffffff;
+        --text: #1c1c1f;
+        --muted: #5a5a63;
+        --accent: #0b6b5b;
+        --border: rgba(28, 28, 31, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      header {
+        padding: 2rem 0 1rem;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+      }
+
+      .container {
+        width: min(100% - 2.5rem, 1100px);
+        margin: 0 auto 4rem;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--border);
+      }
+
+      .stack {
+        display: grid;
+        gap: 1rem;
+      }
+
+      label {
+        display: grid;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 0.7rem 0.9rem;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        font-size: 1rem;
+        font-family: inherit;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .row {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .row-2 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .row-3 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .btn {
+        background: var(--accent);
+        color: white;
+        border: none;
+        padding: 0.7rem 1.2rem;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+      }
+
+      .inline {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .item-card {
+        border: 1px dashed var(--border);
+        padding: 1rem;
+        border-radius: 12px;
+        background: #fafafa;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .status {
+        margin-top: 0.5rem;
+        font-weight: 600;
+      }
+
+      .status.success {
+        color: #137c50;
+      }
+
+      .status.error {
+        color: #b42318;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Admin Light</h1>
+      <p class="muted">Edit content without rebuilding the site.</p>
+    </header>
+
+    <main class="container">
+      <section id="login-card" class="card">
+        <h2>Login</h2>
+        <div class="row row-2">
+          <label>
+            Password
+            <input type="password" id="password-input" autocomplete="current-password" />
+          </label>
+        </div>
+        <button class="btn" id="login-button">Enter admin</button>
+        <p id="login-status" class="status"></p>
+      </section>
+
+      <section id="admin-panel" class="hidden">
+        <div class="card">
+          <div class="inline">
+            <label>
+              Language
+              <select id="locale-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+              </select>
+            </label>
+            <button class="btn secondary" id="refresh-button">Reload JSON</button>
+          </div>
+          <p class="muted">Edits apply to the selected language JSON.</p>
+        </div>
+
+        <form id="content-form" class="stack">
+          <div class="card">
+            <h3>Hero</h3>
+            <div class="row row-2">
+              <label>
+                Title
+                <input type="text" name="hero-title" required />
+              </label>
+              <label>
+                Primary CTA
+                <input type="text" name="hero-primary-cta" required />
+              </label>
+            </div>
+            <label>
+              Subtitle
+              <textarea name="hero-subtitle" required></textarea>
+            </label>
+            <label>
+              Secondary CTA
+              <input type="text" name="hero-secondary-cta" />
+            </label>
+          </div>
+
+          <div class="card">
+            <h3>Chapters 01–05</h3>
+            <div id="chapters-list" class="stack"></div>
+          </div>
+
+          <div class="card">
+            <div class="inline" style="justify-content: space-between;">
+              <h3>Things To Do</h3>
+              <button class="btn secondary" type="button" id="add-thing">Add item</button>
+            </div>
+            <p class="muted">No incluir “Romance” ni “Rum Master”.</p>
+            <div id="things-list" class="stack"></div>
+          </div>
+
+          <div class="card">
+            <h3>Menu links</h3>
+            <div class="row row-2">
+              <label>
+                Things To Do label
+                <input type="text" name="nav-things-label" required />
+              </label>
+              <label>
+                How to get here label
+                <input type="text" name="nav-how-label" required />
+              </label>
+              <label>
+                How to get here URL
+                <input type="url" name="nav-how-link" required />
+              </label>
+              <label>
+                Plan Your Trip label
+                <input type="text" name="nav-plan-label" required />
+              </label>
+              <label>
+                Plan Your Trip URL
+                <input type="url" name="nav-plan-link" required />
+              </label>
+              <label>
+                ETA Form label
+                <input type="text" name="nav-eta-label" required />
+              </label>
+              <label>
+                ETA Form URL
+                <input type="url" name="nav-eta-link" required />
+              </label>
+            </div>
+          </div>
+
+          <div class="card">
+            <button class="btn" type="submit">Save JSON</button>
+            <p id="save-status" class="status"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="/admin.js"></script>
+  </body>
+</html>

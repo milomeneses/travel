@@ -1,0 +1,29 @@
+<section class="contact section reveal" id="{{contact.id}}">
+  <div class="container contact-inner">
+    <div class="contact-copy">
+      <p class="eyebrow">{{contact.eyebrow}}</p>
+      <h2>{{contact.title}}</h2>
+      <p class="section-lead">{{contact.subtitle}}</p>
+      <div class="contact-tags">
+        <span>{{contact.tagOne}}</span>
+        <span>{{contact.tagTwo}}</span>
+        <span>{{contact.tagThree}}</span>
+      </div>
+    </div>
+    <form class="contact-form" aria-label="{{contact.formLabel}}">
+      <label>
+        <span>{{contact.formName}}</span>
+        <input type="text" name="name" placeholder="{{contact.formNamePlaceholder}}" />
+      </label>
+      <label>
+        <span>{{contact.formEmail}}</span>
+        <input type="email" name="email" placeholder="{{contact.formEmailPlaceholder}}" />
+      </label>
+      <label>
+        <span>{{contact.formMessage}}</span>
+        <textarea name="message" rows="4" placeholder="{{contact.formMessagePlaceholder}}"></textarea>
+      </label>
+      <button type="button" class="btn primary">{{contact.formButton}}</button>
+    </form>
+  </div>
+</section>

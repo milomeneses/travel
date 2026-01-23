@@ -47,7 +47,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border-bottom: 1px solid var(--sand-dark);
@@ -76,7 +76,7 @@ section {
   gap: 24px;
   list-style: none;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.1em;
 }
 
@@ -137,7 +137,7 @@ section {
 }
 
 .hero {
-  min-height: 70vh;
+  min-height: 72vh;
   background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
@@ -147,13 +147,33 @@ section {
 .hero-overlay {
   background: rgba(18, 29, 18, 0.45);
   color: var(--white);
-  padding: 120px 8vw;
-  min-height: 70vh;
+  padding: 120px 8vw 160px;
+  min-height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 520px;
   gap: 18px;
+}
+
+.hero-quicklinks {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(78, 85, 47, 0.9);
+  color: var(--white);
+  display: flex;
+  gap: 24px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+}
+
+.quicklink {
+  text-align: center;
 }
 
 .hero h1 {
@@ -183,7 +203,6 @@ section {
 }
 
 .homecoming-text {
-  background: var(--sand);
   padding-right: 20px;
 }
 
@@ -254,7 +273,6 @@ section {
 }
 
 .home-base {
-  background: var(--sand);
   text-align: center;
 }
 
@@ -266,6 +284,14 @@ section {
   max-width: 600px;
   margin: 0 auto 32px;
   color: #554c44;
+}
+
+.section-subtext.light {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-subtext a {
+  color: inherit;
 }
 
 .card-grid {
@@ -315,7 +341,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 24px auto 32px;
+  margin: 24px auto 12px;
   flex-wrap: wrap;
 }
 
@@ -323,7 +349,13 @@ section {
   padding: 10px 16px;
   border-radius: 999px;
   border: none;
-  min-width: 240px;
+  min-width: 220px;
+}
+
+.form-status {
+  min-height: 24px;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
 }
 
 .footer-links {
@@ -332,7 +364,7 @@ section {
   justify-content: center;
   gap: 18px;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
 }
 
@@ -368,6 +400,49 @@ section {
   color: #5a524a;
 }
 
+.admin-body {
+  background: var(--sand);
+  min-height: 100vh;
+}
+
+.admin-header {
+  padding: 30px 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-main {
+  padding: 0 8vw 60px;
+}
+
+.admin-card {
+  background: var(--white);
+  border: 1px solid var(--sand-dark);
+  padding: 24px;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.admin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sand-dark);
+  gap: 16px;
+}
+
+.admin-row span {
+  color: #6a6158;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
@@ -388,6 +463,12 @@ section {
   .flights {
     grid-template-columns: 1fr;
   }
+
+  .hero-quicklinks {
+    position: static;
+    transform: none;
+    margin: 20px auto 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -401,7 +482,12 @@ section {
 
   .hero-overlay {
     max-width: none;
-    padding: 90px 6vw;
+    padding: 90px 6vw 130px;
+  }
+
+  .hero-quicklinks {
+    flex-wrap: wrap;
+    border-radius: 20px;
   }
 
   .activity-strip {

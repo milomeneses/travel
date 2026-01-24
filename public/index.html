@@ -31,8 +31,19 @@
         <div class="nav-actions">
           <button class="icon-btn" aria-label="Search">🔍</button>
           <button class="primary-btn">Plan my trip</button>
+          <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            ☰
+          </button>
         </div>
       </nav>
+      <div class="mobile-menu" aria-hidden="true">
+        <button class="menu-close" aria-label="Close menu">✕</button>
+        <a href="#homecoming">Visiting</a>
+        <a href="#home-base">Stay</a>
+        <a href="#activities">Things to do</a>
+        <a href="#flights">Plan</a>
+        <a href="#newsletter">Newsletter</a>
+      </div>
     </header>
 
     <main>
@@ -83,29 +94,41 @@
       </section>
 
       <section class="activity-strip" id="activities">
-        <div
-          class="activity-card"
-          style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80');"
-        >
-          <span>Adventure</span>
-        </div>
-        <div
-          class="activity-card"
-          style="background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80');"
-        >
-          <span>Culture</span>
-        </div>
-        <div
-          class="activity-card"
-          style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80');"
-        >
-          <span>Water</span>
-        </div>
-        <div
-          class="activity-card"
-          style="background-image: url('https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&w=900&q=80');"
-        >
-          <span>Markets</span>
+        <div class="carousel" data-carousel="activities">
+          <button class="carousel-btn prev" aria-label="Previous activity">‹</button>
+          <div class="carousel-track">
+            <div
+              class="activity-card"
+              style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80');"
+            >
+              <span>Adventure</span>
+            </div>
+            <div
+              class="activity-card"
+              style="background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80');"
+            >
+              <span>Culture</span>
+            </div>
+            <div
+              class="activity-card"
+              style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80');"
+            >
+              <span>Water</span>
+            </div>
+            <div
+              class="activity-card"
+              style="background-image: url('https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&w=900&q=80');"
+            >
+              <span>Markets</span>
+            </div>
+            <div
+              class="activity-card"
+              style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80');"
+            >
+              <span>Culture</span>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next activity">›</button>
         </div>
       </section>
 
@@ -157,43 +180,47 @@
           From historic inns to modern resorts, our neighborhoods put you close to the best
           beaches, dining, and excursions.
         </p>
-        <div class="card-grid">
-          <article class="stay-card">
-            <div
-              class="stay-image"
-              style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80');"
-            ></div>
-            <h3>Christophe Harbour Villas</h3>
-            <p>Oceanfront serenity with personalized service.</p>
-            <button class="link-btn">Explore</button>
-          </article>
-          <article class="stay-card">
-            <div
-              class="stay-image"
-              style="background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210f9?auto=format&fit=crop&w=900&q=80');"
-            ></div>
-            <h3>Royal St. Kitts Resort</h3>
-            <p>Steps from the beach and lively dining.</p>
-            <button class="link-btn">Explore</button>
-          </article>
-          <article class="stay-card">
-            <div
-              class="stay-image"
-              style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80');"
-            ></div>
-            <h3>Park Hyatt St. Kitts</h3>
-            <p>Luxury stays with panoramic island views.</p>
-            <button class="link-btn">Explore</button>
-          </article>
-          <article class="stay-card">
-            <div
-              class="stay-image"
-              style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80');"
-            ></div>
-            <h3>Boutique Beach Hideaway</h3>
-            <p>Quiet escapes nestled in tropical gardens.</p>
-            <button class="link-btn">Explore</button>
-          </article>
+        <div class="carousel" data-carousel="stays">
+          <button class="carousel-btn prev" aria-label="Previous stay">‹</button>
+          <div class="carousel-track card-grid">
+            <article class="stay-card">
+              <div
+                class="stay-image"
+                style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80');"
+              ></div>
+              <h3>Christophe Harbour Villas</h3>
+              <p>Oceanfront serenity with personalized service.</p>
+              <button class="link-btn">Explore</button>
+            </article>
+            <article class="stay-card">
+              <div
+                class="stay-image"
+                style="background-image: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210f9?auto=format&fit=crop&w=900&q=80');"
+              ></div>
+              <h3>Royal St. Kitts Resort</h3>
+              <p>Steps from the beach and lively dining.</p>
+              <button class="link-btn">Explore</button>
+            </article>
+            <article class="stay-card">
+              <div
+                class="stay-image"
+                style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80');"
+              ></div>
+              <h3>Park Hyatt St. Kitts</h3>
+              <p>Luxury stays with panoramic island views.</p>
+              <button class="link-btn">Explore</button>
+            </article>
+            <article class="stay-card">
+              <div
+                class="stay-image"
+                style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80');"
+              ></div>
+              <h3>Boutique Beach Hideaway</h3>
+              <p>Quiet escapes nestled in tropical gardens.</p>
+              <button class="link-btn">Explore</button>
+            </article>
+          </div>
+          <button class="carousel-btn next" aria-label="Next stay">›</button>
         </div>
       </section>
 

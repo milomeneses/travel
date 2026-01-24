@@ -91,6 +91,48 @@ section {
   align-items: center;
 }
 
+.menu-toggle {
+  border: 1px solid var(--deep);
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(246, 241, 234, 0.98);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 8vw;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 20;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--deep);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+.menu-close {
+  align-self: flex-end;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
 .icon-btn {
   border: 1px solid var(--deep);
   background: transparent;
@@ -214,9 +256,6 @@ section {
 }
 
 .activity-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
   padding-top: 0;
 }
 
@@ -231,6 +270,57 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  gap: 18px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel-track.is-scrollable {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 6px;
+}
+
+.carousel-track.is-scrollable > * {
+  scroll-snap-align: start;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: var(--deep);
+  z-index: 5;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel-btn.prev {
+  left: -10px;
+}
+
+.carousel-btn.next {
+  right: -10px;
 }
 
 .play {
@@ -295,9 +385,7 @@ section {
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-auto-columns: minmax(240px, 1fr);
 }
 
 .stay-card {
@@ -448,16 +536,12 @@ section {
     display: none;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+  }
+
   .homecoming {
     grid-template-columns: 1fr;
-  }
-
-  .activity-strip {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .flights {
@@ -490,20 +574,12 @@ section {
     border-radius: 20px;
   }
 
-  .activity-strip {
-    grid-template-columns: 1fr;
-  }
-
   .mosaic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .mosaic-item.tall {
     grid-column: span 2;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
   }
 
   .newsletter-form {
